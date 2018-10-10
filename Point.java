@@ -19,7 +19,7 @@ public class Point{
     return y;
   }
 
-  public String getCords(){
+  public String toString(){
     return "(" + getX() + "," + getY() + ")";
   }
 

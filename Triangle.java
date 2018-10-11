@@ -49,17 +49,9 @@ public class Triangle{
     }
   }
 
-  public String getVert1() {
-    return v1.toString();
-  }
-
-  public String getVert2() {
-    return v2.toString();
-  }
-
-  public String getVert3() {
-    return v3.toString();
-  }
+ public String toString() {
+   return "Triangle: A" + v1 + " B" + v2 + " C" + v3;
+ }
 
   public double getPerimeter() {
     return v1.distanceTo(v2) + v2.distanceTo(v3) + v1.distanceTo(v3);

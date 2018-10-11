@@ -18,17 +18,35 @@ public class Triangle{
     v3 = p3;
   }
 
-
   public Point getVertex( int index) {
-    if ( index == 0) return Point( v1 );
-    if ( index == 1) return Point( v2 );
-    if ( index == 2) return Point( v3);
+    if ( index == 0) {
+      Point p = new Point( v1.getX(), v1.getY());
+      return p;
+    }
+    if ( index == 1) {
+      Point p = new Point( v2.getX(), v2.getY());
+      return p;
+    }
+    if ( index == 2) {
+      Point p = new Point( v3.getX(), v3.getY());
+      return p;
+    }
+    return null;
   }
 
   public void setVertex(int index, Point p) {
-    if ( index == 0) v1 = Point(p);
-    if ( index == 1) v2 = Point(p);
-    if ( index == 2) v3 = Point(p);    
+    if ( index == 0) {
+      Point pnew = new Point( p.getX(), p.getY());
+      v1 = pnew;
+    }
+    if ( index == 1) {
+      Point pnew = new Point( p.getX(), p.getY());
+      v2 = pnew;
+    }
+    if ( index == 2)  {
+      Point pnew = new Point( p.getX(), p.getY());
+      v3 = pnew;
+    }
   }
 
   public String getVert1() {

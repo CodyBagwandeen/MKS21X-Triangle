@@ -8,7 +8,7 @@ public class Point{
   }
 
   public Point( Point p) {
-     Point point = new Point( p.getX(), p.getY());
+     Point point = new Point( p.x, p.y);
   }
 
   public double getX(){
@@ -29,9 +29,9 @@ public class Point{
     return Math.sqrt( dx + dy);
   }
 
-  public double distance(Point p1, Point p2) {
-    double dx = Math.pow(  p1.getX() - p2.getX(), 2) ;
-    double dy = Math.pow(  p1.getY() - p2.getY(), 2) ;
+  public static double distance(Point p1, Point p2) {
+    double dx = Math.pow(  p1.x - p2.x, 2) ;
+    double dy = Math.pow(  p1.y - p2.y, 2) ;
     return Math.sqrt( dx + dy);
   }
 }

@@ -19,6 +19,18 @@ public class Triangle{
   }
 
 
+  public Point getVertex( int index) {
+    if ( index == 0) return Point( v1 );
+    if ( index == 1) return Point( v2 );
+    if ( index == 2) return Point( v3);
+  }
+
+  public void setVertex(int index, Point p) {
+    if ( index == 0) v1 = Point(p);
+    if ( index == 1) v2 = Point(p);
+    if ( index == 2) v3 = Point(p);    
+  }
+
   public String getVert1() {
     return v1.toString();
   }
@@ -31,7 +43,7 @@ public class Triangle{
     return v3.toString();
   }
 
-  public double getPerim() {
+  public double getPerimeter() {
     return v1.distanceTo(v2) + v2.distanceTo(v3) + v1.distanceTo(v3);
   }
 }
